@@ -36,13 +36,15 @@ word_map = {
     '30': 'thirty'
 }
 
+
 def find_word_parts(s):
-    a,b = list(s)
+    a, b = list(s)
     x = a.ljust(2, '0')
     y = b.rjust(2, '0')
     x_str = word_map[x] if x in word_map else ''
     y_str = word_map[y] if y in word_map else ''
     return "{0} {1}".format(x_str, y_str)
+
 
 def time_in_words(time):
     h, m = time.split(":")

@@ -9,6 +9,7 @@ class Fish:
         self.moving = True
         print("{} is swimming".format(self.type))
 
+
 f = Fish('goldfish')
 g = Fish('great white')
 

@@ -1,6 +1,8 @@
-import math, sys
+import math
+import sys
 
-week = ["Saturday","Sunday","Monday","Tuesday","Wednesday","Thursday","Friday"]
+week = ["Saturday", "Sunday", "Monday",
+        "Tuesday", "Wednesday", "Thursday", "Friday"]
 
 expected_output = [
     'Monday',
@@ -32,25 +34,29 @@ dates = [
     [7032, 3, 26]
 ]
 
+
 def day_name(d):
-    y,m,q = d
+    y, m, q = d
     y_cal = y + math.floor(y/4) - math.floor(y/100) + math.floor(y/400)
     m_cal = math.floor((13 * (m+1)) / 5)
-    i = (q + m_cal + y_cal)%7
+    i = (q + m_cal + y_cal) % 7
     return week[i]
 
+
 def zellers(d):
-    y,m,q = d
+    y, m, q = d
     if m == 1:
         y -= 1
         m = 13
     elif m == 2:
         y -= 1
         m = 14
-    return day_name([y,m,q])
+    return day_name([y, m, q])
+
 
 def is_correct(n, name):
     return expected_output[n] == name
+
 
 i = 0
 for d in dates:
