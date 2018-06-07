@@ -1,0 +1,2 @@
+Learning how to interact with files.
+Python is super interesting
